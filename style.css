@@ -1,0 +1,241 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f6f4ef;
+  color: #1f2933;
+}
+
+.page-header {
+  padding: 1.5rem 1rem 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, #ffe7ba, #e0f2fe);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.page-header h1 {
+  margin: 0 0 .5rem;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.subtitle {
+  margin: 0 auto;
+  max-width: 40rem;
+  font-size: 0.95rem;
+}
+
+main {
+  padding: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.columns-section {
+  margin-bottom: 1.5rem;
+}
+
+.columns-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.kingdom-column {
+  flex: 1 1 250px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.05);
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.kingdom-column:nth-child(1) {
+  background: #fef9c3;
+  border-color: #facc15;
+}
+
+.kingdom-column:nth-child(2) {
+  background: #dcfce7;
+  border-color: #22c55e;
+}
+
+.kingdom-column:nth-child(3) {
+  background: #e0f2fe;
+  border-color: #3b82f6;
+}
+
+.kingdom-column h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.period {
+  margin: 0.1rem 0 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.dropzone {
+  flex: 1;
+  min-height: 140px;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 2px dashed rgba(148, 163, 184, 0.8);
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Cards */
+
+.cards-section {
+  margin-top: 1.25rem;
+}
+
+.cards-section h2 {
+  margin-bottom: 0.25rem;
+}
+
+.instructions {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.card-pool {
+  margin-top: 0.75rem;
+  min-height: 100px;
+  background: #f1f5f9;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #cbd5f5;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.card {
+  background: #ffffff;
+  padding: 0.5rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+  font-size: 0.9rem;
+  cursor: grab;
+  max-width: 220px;
+  user-select: none;
+}
+
+.card:active {
+  cursor: grabbing;
+}
+
+.card.correct {
+  background: #bbf7d0;
+  border-color: #16a34a;
+}
+
+.card.incorrect {
+  background: #fecaca;
+  border-color: #dc2626;
+}
+
+/* Drag feedback */
+
+.dropzone.drag-over {
+  border-style: solid;
+  border-color: #6366f1;
+  background: #eef2ff;
+}
+
+/* Controls */
+
+.controls-section {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+button {
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.15);
+  transition: transform 0.05s ease, box-shadow 0.05s ease, opacity 0.15s ease;
+}
+
+#check-button {
+  background: #22c55e;
+  color: #064e3b;
+}
+
+#check-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.4);
+}
+
+.secondary {
+  background: #e5e7eb;
+  color: #111827;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.2);
+}
+
+.secondary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(15, 23, 42, 0.25);
+}
+
+.result-text {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Footer */
+
+.page-footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #4b5563;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Responsivitet */
+
+@media (max-width: 900px) {
+  .columns-container {
+    flex-direction: column;
+  }
+
+  .kingdom-column {
+    min-height: 180px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <title>Egyptens tre riken – Övning</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Egyptens tre riken</h1>
+    <p class="subtitle">
+      Dra varje faktakort till det rike du tycker passar bäst. När du är klar klickar du på
+      <strong>Rätta mina svar</strong>.
+    </p>
+  </header>
+
+  <main>
+    <section class="columns-section">
+      <div class="columns-container">
+        <div class="kingdom-column">
+          <h2>Gamla riket</h2>
+          <p class="period">2700–2200 f.Kr.</p>
+          <div class="dropzone" data-period="old" aria-label="Gamla riket, släpp kort här"></div>
+        </div>
+
+        <div class="kingdom-column">
+          <h2>Mellersta riket</h2>
+          <p class="period">2050–1650 f.Kr.</p>
+          <div class="dropzone" data-period="middle" aria-label="Mellersta riket, släpp kort här"></div>
+        </div>
+
+        <div class="kingdom-column">
+          <h2>Nya riket</h2>
+          <p class="period">1550–1050 f.Kr.</p>
+          <div class="dropzone" data-period="new" aria-label="Nya riket, släpp kort här"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards-section" aria-label="Faktakort att dra">
+      <h2>Faktakort</h2>
+      <p class="instructions">
+        Dra korten upp till rätt rike. Du kan flytta korten hur många gånger du vill.
+      </p>
+      <div id="card-pool" class="card-pool dropzone" data-period="pool" aria-label="Startområde för kort">
+        <div class="card" id="card-1" draggable="true">Pyramiderna byggs i Memphis</div>
+        <div class="card" id="card-2" draggable="true">Farao ses som en gud</div>
+        <div class="card" id="card-3" draggable="true">Hungersnöd och inbördeskrig avslutar perioden</div>
+        <div class="card" id="card-4" draggable="true">Thebe blir huvudstad för första gången</div>
+        <div class="card" id="card-5" draggable="true">Hyksos invaderar Egypten</div>
+        <div class="card" id="card-6" draggable="true">Hyksos lär egyptierna använda stridsvagnar</div>
+        <div class="card" id="card-7" draggable="true">Thebe blir huvudstad igen</div>
+        <div class="card" id="card-8" draggable="true">Egypten expanderar sina gränser genom krig</div>
+        <div class="card" id="card-9" draggable="true">Ramesses II regerar</div>
+        <div class="card" id="card-10" draggable="true">Strejk bland arbetare när Nilen inte svämmar över</div>
+        <div class="card" id="card-11" draggable="true">Landets ekonomi försvagas efter krigen</div>
+        <div class="card" id="card-12" draggable="true">Egypten delas återigen efter stridigheter</div>
+      </div>
+    </section>
+
+    <section class="controls-section">
+      <button id="check-button">Rätta mina svar</button>
+      <button id="reset-button" class="secondary">Börja om</button>
+      <p id="result" class="result-text" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>Tips: Använd gärna helskärmsläge på iPad eller mobil för att få bättre överblick.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
